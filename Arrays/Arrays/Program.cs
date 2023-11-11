@@ -17,6 +17,10 @@ class Arrays
         Console.WriteLine("Vector generado es:");
         PrintVector(vec);
 
+        // Pedimos el número a buscar en el vector
+        Console.Write("Ingrese un número a buscar en el vector: ");
+        int numeroToSearch = int.Parse(Console.ReadLine());
+
 
         // Metodo para llenar el vector aleatoriamente
         static void FillVector(int[] vec)
