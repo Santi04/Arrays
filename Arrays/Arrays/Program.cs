@@ -2,7 +2,7 @@
 
 class Arrays
 {
-    public static void Main()
+    public static void Main(string[] args)
     {
         //Dado un vector de tamaño N, llenar el vector aleatoriamente con números enteros.
         //Pedir por pantalla un número y determinar si ese número se encuentra en el vector,
