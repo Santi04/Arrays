@@ -8,20 +8,34 @@ class Arrays
         int n = int.Parse(Console.ReadLine());
 
         // Creamos un vector de tamaño n
-        int[] vector = new int[n];
+        int[] vec = new int[n];
 
-        // Llenamos el vector aleatoriamente
-        LlenarVectorAleatorio(vector);
+        // Llamamos el metodo para llenar el vector
+        FillVector(vec);
+
+        // Llamamos el metodo para imprimir el vector
+        Console.WriteLine("Vector generado es:");
+        PrintVector(vec);
 
 
-        // Metodo para llenar el vector
-        static void LlenarVectorAleatorio(int[] vector)
+        // Metodo para llenar el vector aleatoriamente
+        static void FillVector(int[] vec)
         {
             Random random = new Random();
-            for (int i = 0; i < vector.Length; i++)
+            for (int i = 0; i < vec.Length; i++)
             {
-                vector[i] = random.Next(1, 51);
+                vec[i] = random.Next(1, 51);
             }
+        }
+
+        // Metodo para imprimir el vector
+        static void PrintVector(int[] vec)
+        {
+            foreach (int numero in vec)
+            {
+                Console.Write("|"+numero + "| ");
+            }
+            Console.WriteLine();
         }
     }
 
