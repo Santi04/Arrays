@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Numerics;
 
 class Arrays
 {
-    static void Main()
+    public static void Main()
     {
         //Dado un vector de tamaño N, llenar el vector aleatoriamente con números enteros.
         //Pedir por pantalla un número y determinar si ese número se encuentra en el vector,
@@ -20,7 +19,7 @@ class Arrays
         FillVector(vec);
 
         // Llamamos el metodo para imprimir el vector
-        Console.WriteLine("Vector generado es:");
+        Console.WriteLine("El vector generado es:");
         PrintVector(vec);
 
         // Pedimos el número a buscar en el vector
@@ -28,16 +27,16 @@ class Arrays
         int numberToSearch = int.Parse(Console.ReadLine());
 
         // Buscamos el número en el vector
-        int posicion = SearchNumberOnVector(vec, numberToSearch);
+        int position = SearchNumberOnVector(vec, numberToSearch);
 
         // Mostrar el resultado
-        if (posicion != -1)
+        if (position != -1)
         {
-            Console.WriteLine($"El número {numberToSearch} se encuentra en la posición {posicion} del vector.");
+            Console.WriteLine($"El número |{numberToSearch}| se encuentra en la posición {position} del vector.");
         }
         else
         {
-            Console.WriteLine($"El número {numberToSearch} no existe en el vector.");
+            Console.WriteLine($"El número |{numberToSearch}| no existe en el vector.");
         }
     }
 
@@ -54,9 +53,9 @@ class Arrays
         // Metodo para imprimir el vector
         static void PrintVector(int[] vec)
         {
-            foreach (int numero in vec)
+            foreach (int number in vec)
             {
-                Console.Write("|"+numero + "| ");
+                Console.Write($"|{number}| ");
             }
             Console.WriteLine();
         }
