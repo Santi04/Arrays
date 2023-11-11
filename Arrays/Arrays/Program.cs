@@ -27,7 +27,7 @@ class Arrays
         Console.Write("Ingrese un número a buscar en el vector: ");
         int numberToSearch = int.Parse(Console.ReadLine());
 
-        // Buscamos el númeo en el vector
+        // Buscamos el número en el vector
         int posicion = SearchNumberOnVector(vec, numberToSearch);
 
         // Mostrar el resultado
@@ -62,11 +62,11 @@ class Arrays
         }
 
         // Metodo para buscar un número en el vector y devolver su posición (índice)
-        static int SearchNumberOnVector(int[] vector, int numeroBuscado)
+        static int SearchNumberOnVector(int[] vec, int numberToSearch)
         {
-            for (int i = 0; i < vector.Length; i++)
+            for (int i = 0; i < vec.Length; i++)
             {
-                if (vector[i] == numeroBuscado)
+                if (vec[i] == numberToSearch)
                 {
                     return i;
                 }
